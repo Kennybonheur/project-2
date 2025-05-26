@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="icon" type="image/x-icon" href="logo.jpg" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codeSchool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <a href="https://www.w3schools.com/">w3schools</a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="ex.html">Home</a></li>                
+                    <li><a href="https://about.coursera.org/?_gl=1*10751d4*_gcl_aw*R0NMLjE3NDc5MjgwOTQuQ2owS0NRandscnZCQmhEbkFSSXNBSEVRZ09UZ3l3Q25FZzRBbHVpN1lVZEVTRkJxQ21IVVk0OTVvbkh4bjIzWWRoNmJKcUpWQy11X1FERWFBdElVRUFMd193Y0I.*_gcl_au*MTcxNDEzMzc0MC4xNzQ3OTI4MDk0">About us</a></li>
+                    <li><a href="https://careers.coursera.com/">Services</a></li>
+                    <li><a href="ex.html">Contant</a></li>
+
+                </ul>
+            </nav>
+        </div>
+        <div id='login-form' class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button' onclick='login()'class='toggle-btn'>Login In</button>
+                    <button type='button' onclick='register()'class='toggle-btn'>Register</button>
+                </div>
+                <!-- to create the login form-->
+                <form id='login' class='input-group-login' action="https://www.freecodecamp.org/news/tag/online-courses/" >
+                    <input type='text' class="input-field" placeholder="Email Id" style="color:aqua;">
+                    <input type="password" class="input-field" placeholder="Enter password" style="color:aqua;" required>
+                    <input type="checkbox" class="check-box"><span>Remember password</span>
+                    <button type="submit" class="submit-btn">Login In</button>
+                </form>
+                
+                <form id='register' class='input-group-register' action="">
+                    <input type='text' class="input-field"placeholder='first name' style="color:aqua;" required>
+                    <input type='text' class="input-field"placeholder='last name' style="color:aqua;" required>
+                    <input type='email' class="input-field"placeholder='email id' style="color:aqua;"required>
+                    <input type='password' class="input-field"placeholder='Password' style="color:aqua;" required>
+       
+                    <input type='password' class="input-field"placeholder='confirm password' style="color:aqua;" required>
+                    <input type='checkbox' class='check-box'><span>I agree to the terms and conditions</span>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </div> 
+    <script>
+        var x=document.getElementById('login');
+        var y=document.getElementById('register');
+        var z=document.getElementById('btn');
+        function register()
+        {
+            x.style.left='-400px';
+            y.style.left='50px';
+            z.style.left='110px';
+
+        }
+        function login()
+        {
+            x.style.left='50px';
+            y.style.left='450px';
+            z.style.left='0px';
+
+        }
+    </script> 
+    <script>
+        var modal=document.getElementById('login-form');
+        Window.onclick = function(event)
+        {
+
+            if(event.target == modal)
+            {
+                modal.style.display="none";
+            }
+        }
+    </script>  
+</body>
+
+</html>
